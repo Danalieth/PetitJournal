@@ -4,8 +4,56 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
+        <div id="menu">
+            <ul>
+                <li class="pere"><a class="active" href="/">Actualité</a>
+                    <ul>
+                        <li><a href="/">Toute l'actualité</a></li>
+                        <li><a href="/">L'actualité en image</a></li>
+                        <li><a href="/">L'actualité en vidéo</a></li>
+                        <li><a href="/">International</a></li>
+                        <li><a href="/">Europe</a></li>
+                        <li><a href="/">France</a></li>
+                    </ul>
+                </li>
+                <li class="pere"><a href="/">Sport</a>
+                    <ul>
+                        <li><a href="/">Tous les résultats</a></li>
+                        <li><a href="/">Football</a></li>
+                        <li><a href="/">Basket</a></li>
+                        <li><a href="/">Handball</a></li>
+                        <li><a href="/">Rugby</a></li>
+                        <li><a href="/">Volley</a></li>
+                        <li><a href="/">Sports d'hiver</a></li>
+                    </ul>
+                </li>
+                <li class="pere"><a href="/">Loisirs</a>
+                    <ul>
+                        <li><a href="/">Programmes TV</a></li>
+                        <li><a href="/">Cinéma</a></li>
+                        <li><a href="/">Séries</a></li>
+                        <li><a href="/">Musiques</a></li>
+                        <li><a href="/">Festivals</a></li>
+                        <li><a href="/">Radio</a></li>
+                        <li><a href="/">People</a></li>
+                    </ul>
+                </li>
+                <li class="pere"><a href="/">Obsèques</a></li>
+                <li class="pere"><a href="/">Annonces</a>
+                    <ul>
+                        <li><a href="/">Automobiles</a></li>
+                        <li><a href="/">Immobilières</a></li>
+                        <li><a href="/">Offre d'emploi</a></li>
+                        <li><a href="/">Autres</a></li>
+                        <li><a href="/">Passez votre annonces</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <br>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
