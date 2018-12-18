@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('/css/article.css') }}">
+{% endblock %}
+
+{% block body %}
+    {{ form_start(create_form) }}
+    {{ form_widget(create_form) }}
+    <input type="submit" value="Enregistrer" />
+    {{ form_end(create_form) }}
+{% endblock %}

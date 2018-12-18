@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('/css/show.css') }}">
+{% endblock %}
+{% block body %}
+    <h1>{{ article.getTitle() }}</h1>
+    <p class="content">{{ article.getBody() }}</p>
+    <p class="foot">{{ article.getDatCrea() | date('d/m/y') }}</p>
+    <a href="{{ path('article_edit', {id: article.id}) }}"><button>Modifier</button></a>
+    {{ form_start(delete_form) }}
+    <input type="submit" value="Supprimer"/>
+    {{ form_end(delete_form) }}
+{% endblock %}

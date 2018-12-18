@@ -41,6 +41,18 @@ class Article
      */
     private $body;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Author", inversedBy="articles")
+     */
+    private $author;
+
+    public function __construct()
+    {
+        $this->dat_crea = new \DateTime();
+        $this->der_maj = new \DateTime();
+        $this->published = false;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -102,6 +114,18 @@ class Article
     public function setBody(?string $body): self
     {
         $this->body = $body;
+
+        return $this;
+    }
+
+    public function getAuthor(): ?Author
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(?Author $author): self
+    {
+        $this->author = $author;
 
         return $this;
     }
